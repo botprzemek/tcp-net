@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <header>
+            <p>
+                <span>
+                    Quarter
+                    <span class="quarter_number">0</span>
+                </span>
+                <span class="quarter_status">In Progress</span>
+            </p>
+        </header>
+        <figure>
+            <section>
+                <button class="minutes_up"></button>><</button>
+                <button class="minutes_down"></button>>></button>
+                <p class="timer">
+                    <span class="minutes">00</span>
+                    <!-- : -->
+                    <!-- <span class="seconds">00</span> -->
+                </p>
+                <button class="seconds_down"><</button>
+                <button class="seconds_up">></button>
+            </section>
+            <button class="timer_control">Stop Clock</button>
+        </figure>
+    </section>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
