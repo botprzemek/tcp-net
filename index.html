@@ -20,27 +20,27 @@
 <body>
     <section>
         <header>
-            <p>
+            <p class="quarter">
                 <span>
                     Quarter
-                    <span class="quarter_number">0</span>
+                    <span class="number">0</span>
                 </span>
-                <span class="quarter_status">In Progress</span>
+                <span class="status">In Progress</span>
             </p>
         </header>
-        <figure>
+        <figure class="timer">
             <section>
-                <button class="minutes_up"></button>><</button>
-                <button class="minutes_down"></button>>></button>
-                <p class="timer">
+                <button class="minutes_down"><</button>
+                <button class="minutes_up">></button>
+                <p>
                     <span class="minutes">00</span>
-                    <!-- : -->
-                    <!-- <span class="seconds">00</span> -->
+                     :
+                     <span class="seconds">00</span>
                 </p>
                 <button class="seconds_down"><</button>
                 <button class="seconds_up">></button>
             </section>
-            <button class="timer_control">Stop Clock</button>
+            <button class="control" disabled="disabled">Start Clock</button>
         </figure>
     </section>
     <script type="text/javascript" src="./index.js"></script>
