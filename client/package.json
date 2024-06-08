@@ -2,11 +2,9 @@
   "name": "basketball-scoreboard",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "client": "node dist/client",
-    "server": "node dist/server",
+    "start": "tsc && node dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,5 +14,8 @@
     "@types/node": "^20.14.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
