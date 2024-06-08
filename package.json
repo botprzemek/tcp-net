@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "client": "node dist/client",
+    "server": "node dist/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
