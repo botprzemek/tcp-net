@@ -1,3 +1,8 @@
-import { Server } from "./server";
+import { config } from "../config";
+import { Connector } from "../connector";
 
-new Server();
+export class Server extends Connector {
+    constructor() {
+        super(config.address().SERVER_HOST, config.address().SERVER_PORT);
+    }
+}

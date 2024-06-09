@@ -1,12 +1,19 @@
-import {createSocket, Socket} from "dgram";
-import {config} from "../config";
+import { createSocket, Socket } from "dgram";
+import { config } from "../config";
 import zlib from "zlib";
 
 export class Connector {
     protected readonly socket: Socket;
 
-    constructor() {
-        this.socket = createSocket("udp4");
+    constructor(host?: string, port?: number) {
+        this.socket = createSocket("udp4")
+            .on("error", this.error)
+            .on("message", this.receive)
+            .on("listening", this.listen)
+            .bind(
+                port ? port : 3000,
+                host ? host : "127.0.0.1"
+            );
     }
 
     protected listen = (): void => {

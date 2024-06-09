@@ -1,3 +1,8 @@
-import { Client } from "./client";
+import { config } from "../config";
+import { Connector } from "../connector";
 
-new Client();
+export class Client extends Connector {
+    constructor() {
+        super(config.address().CLIENT_HOST, config.address().CLIENT_PORT);
+    }
+}
