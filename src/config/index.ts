@@ -9,9 +9,9 @@ export namespace config {
     };
 
     export const address = (): Address => ({
-        SERVER_HOST: process.env.SERVER_HOST ? process.env.SERVER_HOST : "127.0.0.1",
+        SERVER_HOST: process.env.SERVER_HOST ? process.env.SERVER_HOST : "::",
         SERVER_PORT: parseInt(process.env.SERVER_PORT ? process.env.SERVER_PORT : "60000"),
-        CLIENT_HOST: process.env.CLIENT_HOST ? process.env.CLIENT_HOST : "127.0.0.1",
+        CLIENT_HOST: process.env.CLIENT_HOST ? process.env.CLIENT_HOST : "::",
         CLIENT_PORT: parseInt(process.env.CLIENT_PORT ? process.env.CLIENT_PORT : "60001")
     });
 }

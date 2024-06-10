@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/server.js",
+    "client": "tsc && node dist/src/test.client",
+    "server": "tsc && node dist/src/test.server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

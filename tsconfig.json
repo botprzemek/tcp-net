@@ -1,15 +1,17 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
+    "baseUrl": "./",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "resolveJsonModule": true,
     "strict": true,
     "skipLibCheck": true,
     "target": "ES6"
   },
-  "include": ["./src/**/*"],
+  "include": ["./**/*"],
   "exclude": ["./node_modules"]
 }
