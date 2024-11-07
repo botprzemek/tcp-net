@@ -1,22 +1,40 @@
 {
-  "name": "basketball-scoreboard",
+  "name": "tcp-server",
   "version": "1.0.0",
   "description": "",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "nodejs",
+    "docker",
+    "server",
+    "tcp",
+    "network"
+  ],
+  "homepage": "https://github.com/botprzemek/tcp-server",
+  "bugs": "https://github.com/botprzemek/tcp-server/issues",
+  "author": "https://github.com/botprzemek",
+  "license": "Apache-2.0",
+  "main": "./src",
+  "prettier": {
+    "tabWidth": 4
+  },
+  "repository": "https://github.com/botprzemek/tcp-server",
   "scripts": {
-    "build": "tsc",
-    "client": "tsc && node dist/src/test.client",
-    "server": "tsc && node dist/src/test.server",
+    "build": "tsc && tsc-alias",
+    "client": "node dist/client",
+    "server": "node dist/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.14.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "@types/node": "^22.9.0",
+    "prettier": "^3.3.3",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
   },
-  "dependencies": {
-    "dotenv": "^16.4.5"
-  }
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "type": "module"
 }

@@ -1,0 +1,12 @@
+.git/
+.github/
+node_modules/
+
+.env
+.env.*
+
+.dockerignore
+.gitignore
+.prettierignore
+Dockerfile
+README.md

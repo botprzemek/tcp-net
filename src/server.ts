@@ -1,12 +1,12 @@
-import { config } from "../config";
-import { Logger } from "../logger";
-import { createServer, AddressInfo, Server as TCPServer, Socket } from "net";
-import zlib from "zlib";
+import { Logger } from "@/utils/logger";
+
+import { createServer, AddressInfo, Server as TCPServer, Socket } from "node:net";
+import zlib from "node:zlib";
 
 export class Server extends Logger {
     private readonly server: TCPServer;
 
-    constructor(host?: string, port?: number) {
+    constructor(host: string, port: number) {
         super("[ %s:%s ]: %s");
 
         this.server = createServer((socket: Socket) => {
@@ -18,8 +18,8 @@ export class Server extends Logger {
             socket.on("close", this.close);
         })
         .listen(
-            port ?? config.address().SERVER_PORT,
-            host ?? config.address().SERVER_HOST,
+            port,
+            host,
             this.listen
         );
     }

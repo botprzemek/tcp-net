@@ -1,0 +1,8 @@
+services:
+  tcp-network:
+    restart: always
+    image: "tcp-network:latest"
+    container_name: tcp-network
+    build: .
+    ports:
+      - "0.0.0.0:3000:3000"

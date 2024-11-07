@@ -1,0 +1,1 @@
+import("@/server").then((_) => new _.Server("0.0.0.0", 3000));
